@@ -1,8 +1,7 @@
 package JavaCool303;
 
-import java.awt.Color;
-
-import javax.swing.AbstractButton;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import javax.swing.JButton;
 
 /**
@@ -30,7 +29,16 @@ public class Cool303Button extends Cool303Component {
 	 */
 	void initializeComponent() {
 		this.button = new JButton(this.label);
+		this.button.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				buttonPressed();
+			}
+		});
 		super.setComponent(this.button);
+	}
+	
+	private void buttonPressed() {
+		System.out.println(this.label);
 	}
 	
 	/**
@@ -41,8 +49,5 @@ public class Cool303Button extends Cool303Component {
 	public void paintComponent() {
 		this.getComponent().setOpaque(true);
 		this.getComponent().setBackground(this.getTheme().getSecondaryColor());
-		((AbstractButton) this.getComponent()).setContentAreaFilled(false);
-		
-		
 	}
 }

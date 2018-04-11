@@ -13,6 +13,10 @@ public class Cool303Theme {
 	private Font secondaryFont;
 	private boolean showBorder;
 	
+	public enum ContainerStyle {
+		RECTANGULAR, CIRCULAR, BUBBLE;
+	}
+	
 	public Cool303Theme() {
 	}
 	
@@ -25,12 +29,10 @@ public class Cool303Theme {
 	}
 
 	public Color getPrimaryColor() {
-		// TODO Auto-generated method stub
 		return this.primaryColor;
 	}
 	
 	public Color getSecondaryColor() {
-		// TODO Auto-generated method stub
 		return this.secondaryColor;
 	}
 }

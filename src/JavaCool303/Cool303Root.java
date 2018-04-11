@@ -1,9 +1,6 @@
 package JavaCool303;
 
 import javax.swing.JFrame;
-import javax.swing.JLabel;
-
-import java.awt.FlowLayout;
 import java.awt.GridLayout;
 import java.util.ArrayList;
 

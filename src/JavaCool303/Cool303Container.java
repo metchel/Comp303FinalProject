@@ -2,7 +2,6 @@ package JavaCool303;
 
 import java.util.ArrayList;
 
-import javax.swing.JComponent;
 import javax.swing.JPanel;
 
 /**
@@ -39,7 +38,6 @@ public class Cool303Container extends Cool303Component implements Themeable{
 		component.addTheme(getTheme());
 		this.components.add(component);
 		this.panel.add(component.getComponent());
-		
 	}
 	
 	/**
@@ -54,3 +52,4 @@ public class Cool303Container extends Cool303Component implements Themeable{
 		}
 	}
 }
+

@@ -1,12 +1,13 @@
 package JavaCool303;
 
+import java.awt.Graphics;
+
 import javax.swing.JComponent;
-import javax.swing.JPanel;
 public abstract class Cool303Component extends JComponent implements Themeable{
 	
-	protected Cool303Theme theme;
+	private Cool303Theme theme;
 	
-	protected JComponent component;
+	private JComponent component;
 	
 	/**
 	 * Default constructor necessary for abstract class.
@@ -71,4 +72,9 @@ public abstract class Cool303Component extends JComponent implements Themeable{
 	public JComponent getComponent() {
 		return this.component;
 	}
+	
+	@Override
+	public void paintComponent(Graphics g) {
+		super.paintComponent(g);
+	};
 }
