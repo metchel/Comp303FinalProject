@@ -10,9 +10,11 @@ public class Cool303Tester {
 	public static void main (String [] a) {
 		Cool303Root root = new Cool303Root();
 		
-		Cool303Theme theme = new Cool303Theme();
-		theme.setPrimaryColor(Color.YELLOW);
-		theme.setSecondaryColor(Color.BLUE);
+		Cool303Theme theme = new PastelCool303Theme();
+		
+		Cool303Theme theme2 = new Cool303Theme();
+		theme2.setPrimaryColor(Color.GREEN);
+		theme2.setSecondaryColor(Color.RED);
 		
 		Cool303Container cont = new Cool303Container();
 		
@@ -22,11 +24,7 @@ public class Cool303Tester {
 		Cool303Button b1 = new Cool303Button("1");
 		Cool303Button b2 = new Cool303Button("2");
 		Cool303Button b3 = new Cool303Button("3");
-		
-		b0.getComponent().setOpaque(true);
-		b1.getComponent().setOpaque(true);
-		
-		
+
 		cont.addCool303Component(b0);
 		cont.addCool303Component(b1);
 		cont.addCool303Component(b2);

@@ -1,9 +1,10 @@
 package JavaCool303;
 
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 
 import java.awt.FlowLayout;
-import java.awt.Graphics2D;
+import java.awt.GridLayout;
 import java.util.ArrayList;
 
 public class Cool303Root extends JFrame implements Themeable{
@@ -11,17 +12,31 @@ public class Cool303Root extends JFrame implements Themeable{
 	private ArrayList<Cool303Component> components;
 	private Cool303Theme theme;
 
+	/**
+	 * Constructor method:
+	 * Initializes the empty list of components.
+	 * The root holds Cool303Components.
+	 * The root's theme is applied to all components it holds.
+	 */
 	public Cool303Root(){		
 		this.components = new ArrayList<Cool303Component>();
 	}
 	
+	/**
+	 * @param component a Cool303Component to be added to this root.
+	 * Add the component into the underlying JFrame.
+	 */
 	public void addCool303Component (Cool303Component component) {
 		this.components.add(component);
-		super.add(component.getComponent());
+		this.add(component.getComponent());
 	}
 	
+	/**
+	 * Paints all components held within this root frame.
+	 * Applies the theme to all components of this root.
+	 */
 	public void paint() {
-		super.setLayout(new FlowLayout());
+		super.setLayout(new GridLayout());
 		super.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		super.pack();
 		super.setVisible(true);
@@ -49,12 +64,12 @@ public class Cool303Root extends JFrame implements Themeable{
 	
 	@Override
 	public Cool303Theme getTheme() {
-		return null;
+		return this.theme;
 	}
 
 	@Override
 	public void paintComponent() {
-		// TODO Auto-generated method stub
+		paint();
 		
 	}
 }

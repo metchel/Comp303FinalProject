@@ -11,6 +11,7 @@ public class Cool303Theme {
 	private Color secondaryColor;
 	private Font primaryFont;
 	private Font secondaryFont;
+	private boolean showBorder;
 	
 	public Cool303Theme() {
 	}

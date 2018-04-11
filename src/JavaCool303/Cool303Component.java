@@ -1,6 +1,7 @@
 package JavaCool303;
 
 import javax.swing.JComponent;
+import javax.swing.JPanel;
 public abstract class Cool303Component extends JComponent implements Themeable{
 	
 	protected Cool303Theme theme;
@@ -15,6 +16,7 @@ public abstract class Cool303Component extends JComponent implements Themeable{
 	}
 	
 	public abstract void paintComponent();
+	abstract void initializeComponent();
 	
 	/**
 	 * Constructor assigns a theme for this component.
@@ -26,7 +28,7 @@ public abstract class Cool303Component extends JComponent implements Themeable{
 	
 	/**
 	 * Child classes will use this method for wrapping of appropriate JComponents.
-	 * @param component
+	 * @param component underlying JComponent to be wrapped.
 	 */
 	public void setComponent(JComponent component) {
 		this.component = component;
@@ -64,7 +66,7 @@ public abstract class Cool303Component extends JComponent implements Themeable{
 	}
 	
 	/**
-	 * @return 
+	 * @return  the underlying JComponent.
 	 */
 	public JComponent getComponent() {
 		return this.component;
